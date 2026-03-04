@@ -2,7 +2,7 @@
 
 ## Pre-Launch Checklist
 
-- [ ] Verify `cast-control` name is available on PyPI (`pip index versions cast-control`)
+- [ ] Verify `castlocal` name is available on PyPI (`pip index versions castlocal`)
 - [ ] Replace `YuriKovalov22` in pyproject.toml and docs with actual GitHub username
 - [ ] Record demo GIF (see below)
 - [ ] Create GitHub repo and push code
@@ -33,7 +33,7 @@ python -m build
 twine upload dist/*
 ```
 
-Verify: `pip install cast-control && cast --help`
+Verify: `pip install castlocal && cast --help`
 
 ## Step 3: Submit to Homebrew (after PyPI)
 
@@ -41,10 +41,10 @@ Create a tap first (easier than homebrew-core for new packages):
 
 ```bash
 # Create repo: homebrew-tap on GitHub
-# Add formula (see docs/cast-control.rb template)
+# Add formula (see docs/castlocal.rb template)
 # Users install with:
 brew tap YuriKovalov22/tap
-brew install cast-control
+brew install castlocal
 ```
 
 For homebrew-core submission (later, once you have stars/downloads):
@@ -52,7 +52,7 @@ https://docs.brew.sh/Adding-Software-to-Homebrew
 
 ## Step 4: Show HN Post
 
-**Title:** `Show HN: Cast Control – Stream any local video to Chromecast from your terminal`
+**Title:** `Show HN: CastLocal – Stream any local video to Chromecast from your terminal`
 
 **Body:**
 ```
@@ -61,7 +61,7 @@ I built a CLI and TUI for casting local video files to Chromecast devices.
 The problem: VLC's Chromecast support has been broken for years. Chrome tab
 casting murders quality. I wanted something that just works from the terminal.
 
-Cast Control auto-discovers devices, probes the video format, and if it's not
+CastLocal auto-discovers devices, probes the video format, and if it's not
 natively supported (MKV, AVI, etc.), transcodes on-the-fly using ffmpeg with
 HLS segmentation — so playback starts in seconds, not minutes.
 
@@ -70,9 +70,9 @@ pane browses files, right pane shows devices as folders. F5 to cast.
 
 Built with Python, pychromecast, Textual, and ffmpeg.
 
-pip install cast-control
+pip install castlocal
 
-https://github.com/YuriKovalov22/cast-control
+https://github.com/YuriKovalov22/castlocal
 ```
 
 **Best times to post:** Tuesday–Thursday, 8-10am ET
@@ -93,7 +93,7 @@ Submit PRs to these repos (one PR each, follow their contribution guidelines):
 
 **PR format:** One-liner with description matching the list's style. Example:
 ```
-- [cast-control](https://github.com/YuriKovalov22/cast-control) - Cast local video files to Chromecast with CLI/TUI and automatic transcoding.
+- [castlocal](https://github.com/YuriKovalov22/castlocal) - Cast local video files to Chromecast with CLI/TUI and automatic transcoding.
 ```
 
 ## Step 6: Reddit Posts
@@ -110,7 +110,7 @@ Post to these subreddits (space them 2-3 days apart, not all at once):
 - Tweet/X thread showing the TUI with screenshots (retro aesthetics go viral)
 - dev.to post: "How I replaced VLC Chromecast casting with Python"
 - Monitor GitHub issues — first users' bugs = highest priority
-- Add `pipx install cast-control` to README once confirmed working
+- Add `pipx install castlocal` to README once confirmed working
 
 ## Revenue Path (if traction appears)
 

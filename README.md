@@ -1,10 +1,10 @@
-# Cast Control
+# CastLocal
 
 **Cast any local video to Chromecast — from your terminal.**
 
 A CLI and retro TUI (Far Manager-style) for streaming local video files to Chromecast devices. Handles format conversion automatically with hardware-accelerated transcoding.
 
-![cast-control demo](docs/demo.gif)
+![castlocal demo](docs/demo.gif)
 
 ## Why?
 
@@ -17,13 +17,13 @@ A CLI and retro TUI (Far Manager-style) for streaming local video files to Chrom
 ## Install
 
 ```bash
-pipx install cast-control
+pipx install castlocal
 ```
 
 Or with pip:
 
 ```bash
-pip install cast-control
+pip install castlocal
 ```
 
 > Requires `ffmpeg` on your system: `brew install ffmpeg` (macOS) or `apt install ffmpeg` (Linux).

@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "cast-control"
+name = "castlocal"
 version = "0.1.0"
 description = "Cast any local video to Chromecast — CLI and retro TUI"
 readme = "README.md"
