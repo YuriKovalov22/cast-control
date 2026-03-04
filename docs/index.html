@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cast Control — Stream any video to Chromecast from your terminal</title>
+<meta name="description" content="CLI and retro TUI for casting local video files to Chromecast. Hardware-accelerated transcoding. Any format. Just works.">
+<style>
+  :root { --bg: #0c0c0c; --fg: #e0e0e0; --accent: #00d4aa; --dim: #888; --card: #1a1a1a; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace; background: var(--bg); color: var(--fg); line-height: 1.6; }
+  .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 4rem 0 2rem; }
+  .hero h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem; }
+  .hero .tagline { font-size: 1.1rem; color: var(--dim); margin-bottom: 2rem; }
+  .install-box {
+    background: var(--card); border: 1px solid #333; border-radius: 8px;
+    padding: 1rem 1.5rem; display: inline-block; font-size: 1rem; margin-bottom: 1rem;
+  }
+  .install-box .prompt { color: var(--dim); }
+  .install-box .cmd { color: var(--accent); }
+
+  /* Demo placeholder */
+  .demo {
+    background: var(--card); border: 1px solid #333; border-radius: 8px;
+    padding: 2rem; margin: 2rem 0; text-align: center; color: var(--dim);
+    min-height: 300px; display: flex; align-items: center; justify-content: center;
+  }
+  .demo img { max-width: 100%; border-radius: 4px; }
+
+  /* Features */
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 3rem 0; }
+  .feature { background: var(--card); border: 1px solid #333; border-radius: 8px; padding: 1.2rem; }
+  .feature h3 { color: var(--accent); font-size: 0.9rem; margin-bottom: 0.4rem; }
+  .feature p { color: var(--dim); font-size: 0.85rem; }
+
+  /* Usage */
+  .usage { margin: 3rem 0; }
+  .usage h2 { color: var(--accent); font-size: 1.2rem; margin-bottom: 1rem; }
+  pre {
+    background: var(--card); border: 1px solid #333; border-radius: 8px;
+    padding: 1rem 1.5rem; overflow-x: auto; font-size: 0.85rem; margin-bottom: 1.5rem;
+  }
+  pre .comment { color: #666; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 3rem 0 2rem; color: var(--dim); font-size: 0.8rem; }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .features { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="hero">
+    <h1>cast-control</h1>
+    <p class="tagline">Stream any local video to Chromecast — from your terminal.</p>
+    <div class="install-box">
+      <span class="prompt">$</span> <span class="cmd">pip install cast-control</span>
+    </div>
+  </div>
+
+  <div class="demo">
+    <!-- Replace with: <img src="demo.gif" alt="cast-control TUI demo"> -->
+    [ demo GIF goes here — record with asciinema or vhs ]
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <h3>Any Format</h3>
+      <p>MKV, AVI, MOV, WMV, FLV — automatically transcodes to H.264 with hardware acceleration.</p>
+    </div>
+    <div class="feature">
+      <h3>Instant Playback</h3>
+      <p>HLS streaming starts playing in seconds. No waiting for full transcode.</p>
+    </div>
+    <div class="feature">
+      <h3>Retro TUI</h3>
+      <p>Far Manager-style dual-pane interface. Browse files, pick device, cast. All keyboard.</p>
+    </div>
+    <div class="feature">
+      <h3>CLI Too</h3>
+      <p>Just <code>cast movie.mkv</code>. Auto-discovers devices. Full playback controls.</p>
+    </div>
+  </div>
+
+  <div class="usage">
+    <h2>Quick Start</h2>
+    <pre><span class="comment"># Install</span>
+pip install cast-control
+brew install ffmpeg  <span class="comment"># if you don't have it</span>
+
+<span class="comment"># Cast a file</span>
+cast movie.mkv
+
+<span class="comment"># Or use the TUI</span>
+cast-tui</pre>
+
+    <h2>How It Works</h2>
+    <pre>1. Discovers Chromecast devices on your network (mDNS)
+2. Probes the video — if MP4/H.264, streams directly
+3. Otherwise, transcodes to H.264+AAC via ffmpeg (HW accelerated)
+4. Serves HLS segments over HTTP as they encode
+5. Casts to device with full playback controls</pre>
+  </div>
+
+  <div class="footer">
+    <p>MIT License &middot; <a href="https://github.com/YuriKovalov22/cast-control">GitHub</a> &middot; <a href="https://pypi.org/project/cast-control/">PyPI</a></p>
+  </div>
+</div>
+
+</body>
+</html>

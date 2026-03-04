@@ -1,0 +1,161 @@
+/* Cast TUI — Far Manager color theme */
+
+Screen {
+    background: #000080;
+}
+
+/* Main dual-pane layout */
+#main-panels {
+    height: 1fr;
+}
+
+/* Both panes */
+FileBrowserPane, DevicePane {
+    width: 1fr;
+    border: solid #008080;
+    background: #000080;
+}
+
+/* Active pane gets brighter border */
+FileBrowserPane:focus-within {
+    border: solid #FFFFFF;
+}
+
+DevicePane:focus-within {
+    border: solid #FFFFFF;
+}
+
+/* Panel headers */
+.pane-header {
+    background: #008080;
+    color: #000000;
+    text-style: bold;
+    height: 1;
+    padding: 0 1;
+}
+
+/* Data tables */
+.pane-table {
+    background: #000080;
+    color: #00FFFF;
+    height: 1fr;
+}
+
+.pane-table > .datatable--cursor {
+    background: #008080;
+    color: #000000;
+    text-style: bold;
+}
+
+.pane-table > .datatable--header {
+    background: #000080;
+    color: #00FFFF;
+    text-style: bold;
+}
+
+/* ── Far Manager-style dialogs ────────────────────────────── */
+
+ModalScreen {
+    align: center middle;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Legacy modal-dialog (error, file info, confirm) */
+.modal-dialog {
+    width: 60;
+    height: auto;
+    border: solid #FFFF00;
+    background: #000080;
+    padding: 1 2;
+}
+
+.modal-dialog Static {
+    color: #FFFFFF;
+    margin: 0 0 1 0;
+}
+
+.modal-dialog .modal-title {
+    text-style: bold;
+    color: #FFFF00;
+    text-align: center;
+}
+
+.modal-buttons {
+    height: 3;
+    align: center middle;
+}
+
+.modal-buttons Button {
+    margin: 0 1;
+}
+
+/* ── Far dialog: compact copy/transcode/casting style ──── */
+
+.far-dialog {
+    width: 64;
+    height: auto;
+    border: solid #008080;
+    background: #000080;
+    padding: 0 1;
+}
+
+/* Title centered in border */
+.far-dialog-title {
+    text-style: bold;
+    color: #FFFF00;
+    text-align: center;
+    height: 1;
+    margin: 0;
+}
+
+/* Content text */
+.far-dialog Static {
+    color: #FFFFFF;
+    height: 1;
+    margin: 0;
+}
+
+.far-dialog .far-dialog-dim {
+    color: #808080;
+}
+
+/* Progress bar: full width, prominent yellow-on-blue like Far Manager */
+.far-dialog #cast-bar,
+.far-dialog #transcode-bar,
+.far-dialog #scan-bar {
+    color: #FFFF00;
+    background: #000080;
+    height: 1;
+    margin: 0;
+}
+
+/* Percentage right-aligned */
+.far-dialog #cast-pct,
+.far-dialog #transcode-pct,
+.far-dialog #scan-pct {
+    text-align: right;
+    color: #FFFF00;
+    height: 1;
+    margin: 0;
+}
+
+/* Status line */
+.far-dialog #cast-status,
+.far-dialog #transcode-status {
+    color: #00FFFF;
+    height: 1;
+    margin: 0;
+}
+
+/* Buttons row */
+.far-dialog-buttons {
+    height: 3;
+    align: center middle;
+    margin: 0;
+}
+
+.far-dialog-buttons Button {
+    margin: 0 1;
+    min-width: 12;
+}
+
