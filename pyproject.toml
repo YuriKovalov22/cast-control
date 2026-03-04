@@ -30,6 +30,9 @@ dependencies = [
 Homepage = "https://github.com/YuriKovalov22/cast-control"
 Issues = "https://github.com/YuriKovalov22/cast-control/issues"
 
+[tool.hatch.build.targets.wheel]
+packages = ["castcontrol"]
+
 [project.scripts]
 cast = "castcontrol.cli:main"
 cast-tui = "castcontrol.tui:main"
