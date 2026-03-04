@@ -4,8 +4,7 @@
 
 A CLI and retro TUI (Far Manager-style) for streaming local video files to Chromecast devices. Handles format conversion automatically with hardware-accelerated transcoding.
 
-<!-- Replace with actual recording: -->
-<!-- ![cast-control demo](docs/demo.gif) -->
+![cast-control demo](docs/demo.gif)
 
 ## Why?
 
@@ -16,6 +15,12 @@ A CLI and retro TUI (Far Manager-style) for streaming local video files to Chrom
 - Two interfaces: quick **CLI** or a keyboard-driven **TUI** with a dual-pane file manager.
 
 ## Install
+
+```bash
+pipx install cast-control
+```
+
+Or with pip:
 
 ```bash
 pip install cast-control
